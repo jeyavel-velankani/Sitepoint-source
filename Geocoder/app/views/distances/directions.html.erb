@@ -1,0 +1,10 @@
+  <%= label_tag 'from', 'From' %>
+  <%= select_tag 'start', options_from_collection_for_select(@places, :address, :title), class: "form-control" %>
+  
+  <%= label_tag 'to', 'To' %>
+  <%= select_tag 'end', options_from_collection_for_select(@places, :address, :title), class: "form-control" %>
+
+  <div id="map"></div>
+   
+  <div id="warnings-panel"></div>
+  

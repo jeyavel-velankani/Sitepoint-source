@@ -1,0 +1,15 @@
+<header><h1 class="display-4">Edit InPlaces</h1></header>
+
+<div class="card">
+  <div class="card-block">
+    <ul>
+    	<% @places.each do |place| %>
+		    <li>
+			  <%= link_to place.title, edit_place_path(place) %>
+			  visited by <strong><%= place.visited_by %></strong>
+			</li>
+		<% end %>
+    </ul>
+  </div>
+</div>
+

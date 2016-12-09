@@ -3,6 +3,14 @@ class DistancesController < ApplicationController
     @places = Place.all
   end
 
+  def directions
+    @places = Place.all
+  end
+
+  def directionswithpanel
+    @places = Place.all
+  end
+
   def create
     @from = Place.find_by(id: params[:from])
     @to = Place.find_by(id: params[:to])
