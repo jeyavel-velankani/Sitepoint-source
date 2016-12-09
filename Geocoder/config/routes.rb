@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :places #, except: [:update, :edit, :destroy]
   resources :distances , only: [:new, :create]
   get 'edit_index', to: 'places#edit_index'
-  # get 'directions', to: 'distances#directions'
-  # get 'directionswithpanel', to:  'distances#directionswithpanel'
+  get 'directions', to: 'distances#directions'
+  get 'directionswithpanel', to:  'distances#directionswithpanel'
   root 'places#index'
 end

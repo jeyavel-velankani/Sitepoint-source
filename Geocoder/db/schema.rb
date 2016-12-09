@@ -13,14 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160418141653) do
 
-  create_table "places", force: :cascade do |t|
+  create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "address"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.text     "address",    limit: 65535
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
     t.string   "visited_by"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

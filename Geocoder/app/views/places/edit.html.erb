@@ -1,5 +1,7 @@
-<header><h1 class="display-4">Edit Place</h1></header>
-
+<h1><%= @place.title %></h1>
+  <%= javascript_include_tag 'map.js' %>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBt8rvmmvl2nr52zZO4zvwaNbMFeKf4M&callback=initMap" async defer>
+</script>
 <%= form_for @place do |f| %>
   <fieldset class="form-group">
     <%= f.label :title %>
@@ -45,6 +47,6 @@
 
 <div class="card">
   <div class="card-block">
-    <div id="map"></div>
+    <div id="map2"></div>
   </div>
 </div>

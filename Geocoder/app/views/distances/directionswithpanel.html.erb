@@ -1,3 +1,7 @@
+<%= javascript_include_tag 'map2.js' %>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBBt8rvmmvl2nr52zZO4zvwaNbMFeKf4M&callback=initMap" async defer>
+</script>
+
 <%= label_tag 'from', 'From' %>
   <%= select_tag 'start', options_from_collection_for_select(@places, :address, :title), class: "form-control" %>
   
